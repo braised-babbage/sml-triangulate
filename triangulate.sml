@@ -210,9 +210,11 @@ fun segSVG ((x1,y1) : point, (x2,y2) : point) =
   "\" stroke=\"royalblue\" />"
 
 fun svgWrap (w,h,s : string) =
-  let val prefix = "<svg height=\"" ^ Int.toString h ^ "\" width=\"" ^ Int.toString w ^ "\">"
+  let val header = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">" 		      
+      val prefix = "<svg height=\"" ^ Int.toString h ^ "\" width=\"" ^ Int.toString w ^
+		   "\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">"
       val suffix = "</svg>"
-  in prefix ^ "\n" ^ s ^ "\n" ^ suffix end
+  in header ^ "\n" ^ prefix ^ "\n" ^ s ^ "\n" ^ suffix end
       
 	
 (* test cases *)
