@@ -9,4 +9,4 @@ it can compute a list of edges so that you get something like this:
 ![triangulated test polygon](https://cdn.rawgit.com/kilimanjaro/sml-triangulate/9aec0bd/testPolyTriangulated.svg)
 
 ## Remark
-The algorithm works by successively clipping ears from the polygon, where an ear is a triangle formed by three adjacent vertices that could be included in a valid triangulation. There are faster algorithms, but this method is particularly simple. The implementation is very much stateful -- lots of references thrown around, etc.
+The algorithm works by successively clipping ears from the polygon, where an ear is a triangle formed by three adjacent vertices that could be included in a valid triangulation. There are faster algorithms, or ones with "desireable properties" (e.g. no excessively thin triangles), but this method is particularly simple. The implementation is very much stateful -- lots of references thrown around, etc. 
